@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker buildx build ../../backend -t helloWorld/backend
+docker buildx build ../../backend -t hello-world-backend
