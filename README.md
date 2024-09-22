@@ -4,23 +4,24 @@
 
 ### How to run
 
-Build New Image
+#### Build New Image
 
 `$ scripts/docker/docker-image-build.sh`
 
-go to deployment folder
+* go to deployment folder
+
 `$ cd deployment`
 
 
-Generate Kubernetes config file
+* Generate Kubernetes config file
 
 `$ npm run synth`
 
-Go back to the root folder
+* Go back to the root folder
 
 `$ cd ..`
 
-Run kubernetes (Minikube)
+#### Run kubernetes (Minikube)
 
 `$ kubectl apply -f deployment/dist/deployment.k8s.yaml`
 
