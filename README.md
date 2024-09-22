@@ -13,7 +13,7 @@
 `$ cd deployment`
 
 
-* Generate Kubernetes config file
+#### Generate Kubernetes config file
 
 `$ npm run synth`
 
@@ -27,15 +27,15 @@
 
 ### How to test hello world rest api in the host
 
-Make sure kubernetes deployment is up and running
+* Make sure kubernetes deployment is up and running
 
 `$ kubectl get deploy`
 
-Open another terminal or terminal tab and run minikube tunnel
+* Open another terminal or terminal tab and run minikube tunnel
 
 `$ minikube tunnel`
 
-Open browser or terminal and test http://localhost:3000 and make sure that you get the helloworld emssage correctly.
+* Open browser or terminal and test http://localhost:3000 and make sure that you get the helloworld emssage correctly.
 
 
 
