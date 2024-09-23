@@ -8,6 +8,11 @@ export class MyChart extends Chart {
 
     const helloWorldBackendDeployment = new Deployment(this, 'hello-world', {
         replicas: 1,
+        securityContext: {
+            user: 1000,
+            // group: 1000,
+        //     ensureNonRoot: false,
+        },
         containers: [
             {
                 name: 'app-container',
@@ -17,7 +22,9 @@ export class MyChart extends Chart {
                     number: 3000,
                 }],
                 securityContext: {
-                    ensureNonRoot: false,
+                    // user: 1000,
+                //     group: 1000,
+                //     ensureNonRoot: false,
                 },
             }
         ]
@@ -26,7 +33,8 @@ export class MyChart extends Chart {
     helloWorldBackendDeployment.exposeViaService({
         ports: [
             {
-                port: 3000,
+                port: 8080,
+                targetPort:3000,
             }
         ],
         serviceType: ServiceType.LOAD_BALANCER,
