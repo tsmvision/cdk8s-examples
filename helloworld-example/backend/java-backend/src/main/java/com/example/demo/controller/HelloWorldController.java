@@ -10,6 +10,6 @@ public class HelloWorldController {
 
     @GetMapping
     public ResponseEntity<String> getHelloWorld() {
-        return ResponseEntity.ok("Hello World from Spring Boog!!!");
+        return ResponseEntity.ok("Hello World from Spring Boot!!!");
     }
 }
