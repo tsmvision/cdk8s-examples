@@ -19,9 +19,9 @@ const deployment = new Deployment(chart, 'deployment', {
 });
 
 deployment.addContainer({
-    image: 'tsmvision/spring-boot-hello-world:latest',
+    image: 'spring-boot-hello-world:latest',
     portNumber: 8080,
-    imagePullPolicy: ImagePullPolicy.IF_NOT_PRESENT,
+    imagePullPolicy: ImagePullPolicy.NEVER,
     securityContext: {
     //     // TODO: fix this
         ensureNonRoot: false,
